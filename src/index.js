@@ -6,11 +6,14 @@ import './index.css';
 import App from './containers/App'
 import registerServiceWorker from './registerServiceWorker';
 import 'tachyons';
-import {robots} from  "./robots";
+import { searchRobots } from './reducers'
 
-const store = createStore(rootReducer);
+const store = createStore(searchRobots);
 
 ReactDOM.render(
+	// Provider pass down varibale store to app
+	<Provider store={store}>  
 		<App />
+	</Provider>
 	, document.getElementById('root'));
 registerServiceWorker();
