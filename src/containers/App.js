@@ -36,7 +36,7 @@ class App extends Component {
     //         // searchfield: ''
     //         //  Redux replace state in app so searchfield is nolonger needed
     //     }
-    // } nomore state needed because 
+    // } nomore state needed because props from 2 functions above
 
     componentDidMount() {
         this.props.onRequestRobots();
