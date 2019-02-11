@@ -7,12 +7,12 @@ import {
 
 export const setSearchField = (text) => ({
 		type: "CHANGE_SEARCH_FIELD", // The action that gonna be taken
-		payload: text //sending data to producer
+		payload: text //sending data to producer, data for updating state
 });
 
 export const requestRobots = () => (dispatch) => {
 	dispatch({type: REQUEST_ROBOTS_PENDING});
-	fetch("http://www.json-generator.com/api/json/get/bVwMvcNtwy?indent=2")
+	fetch("https://api.jsonbin.io/b/5c614e84ad5128320af6cb16")
             .then(response => response.json())
             .then(data => dispatch({type: REQUEST_ROBOTS_SUCCESS, payload: data}))
             .catch(error => dispatch({type: REQUEST_ROBOTS_FAILED, payload: error}))

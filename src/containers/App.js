@@ -67,7 +67,7 @@ class App extends Component {
             <h1 className = "tc"> Loading </h1>:
             ( 
             	<div className = "tc" >
-                <h1 className = "f1" > Mining Robots </h1> 
+                <h1 className = "f1" >Robots</h1> 
                 <SearchBox searchChange = { onSearchChange }/> 
                 <Scroll >
                 <CardList robots = { filteredRobots }/> </Scroll> 
